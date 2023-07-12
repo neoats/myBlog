@@ -1,0 +1,39 @@
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+.top-border-enter {
+  transform: scaleY(0);
+}
+
+.top-border-enter-active {
+  transform: scaleY(1);
+  transition: transform 700ms;
+}
+
+.right-border-enter {
+  transform: scaleX(0);
+}
+
+.right-border-enter-active {
+  transform: scaleX(1);
+  transition: transform 700ms;
+}
+
+.bottom-border-enter {
+  transform: scaleY(0);
+}
+
+.bottom-border-enter-active {
+  transform: scaleY(1);
+  transition: transform 700ms;
+}
+
+.left-border-enter {
+  transform: scaleX(0);
+}
+
+.left-border-enter-active {
+  transform: scaleX(1);
+  transition: transform 700ms;
+}
