@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
 import Image from "next/image";
-import Carousel from "react-multi-carousel";
+
 import Link from "next/link";
 
 const FeaturedPostCard = ({ post }) => (

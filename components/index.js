@@ -9,4 +9,4 @@ export { default as Comments } from './Comments';
 export { default as PostDetail } from './PostDetail';
 export { default as FeaturedPostCard } from './FeaturedPostCard';
 export { default as Loader } from './Loader';
-export { default as MyPostCard } from './MyPostCard';
+export { default as Postcard } from './Postcard';

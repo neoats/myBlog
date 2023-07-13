@@ -2,8 +2,7 @@ import React from "react";
 import moment from "moment";
 import Link from "next/link";
 
-const MyPostCard = ({ post }) => {
-  console.log(post);
+export const Postcard = ({ post }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-1 lg:p-1 pb-12 mb-12">
       <div className="relative overflow-hidden shadow-md pb-80 mb-6">
@@ -74,4 +73,4 @@ const MyPostCard = ({ post }) => {
   );
 };
 
-export default MyPostCard;
+export default Postcard;
