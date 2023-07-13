@@ -2,35 +2,35 @@ import React from "react";
 import moment from "moment";
 import Link from "next/link";
 
-const PostCard = ({ post }) => {
+const MyPostCard = ({ post }) => {
   console.log(post);
   return (
     <div className="bg-white shadow-lg rounded-lg p-1 lg:p-1 pb-12 mb-12">
-    <div className="relative overflow-hidden shadow-md pb-80 mb-6">
-      <div className="object-center absolute h-80 w-full shadow-lg rounded-t-lg lg:rounded-lg">
-        {post.featuredImage && post.featuredImage.url ? (
-          <img
-            src={post.featuredImage.url}
-            alt={post.title}
-            className="object-cover h-80 w-full"
-          />
-        ) : (
-          <div className="bg-gray-300 h-full w-full" />
-        )}
+      <div className="relative overflow-hidden shadow-md pb-80 mb-6">
+        <div className="object-center absolute h-80 w-full shadow-lg rounded-t-lg lg:rounded-lg">
+          {post.featuredImage && post.featuredImage.url ? (
+            <img
+              src={post.featuredImage.url}
+              alt={post.title}
+              className="object-cover h-80 w-full"
+            />
+          ) : (
+            <div className="bg-gray-300 h-full w-full" />
+          )}
+        </div>
       </div>
-    </div>
-  
-    <div className="mb-12"> {/* Alt kenardan 12 birimlik boşluk */}
-      {/* Diğer içerikler */}
-    </div>
+
+      <div className="mb-12">
+        {/* Diğer içerikler */}
+      </div>
       <div>
-        <h1 className="transaition duration-700 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font semibold">
+        <h1 className="transaition duration-700 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold">
           <Link href={`/post/${post.slug}`}>{post.title}</Link>
         </h1>
         <div className="bloc  text-center items-center justify-center mb-8 w-full">
           <div className="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8">
             <img
-               unoptimized="true"
+              unoptimized="true"
               alt={post.author.name}
               height="30px"
               width="30px"
@@ -74,4 +74,4 @@ const PostCard = ({ post }) => {
   );
 };
 
-export default PostCard;
+export default MyPostCard;
