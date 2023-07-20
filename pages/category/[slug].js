@@ -28,7 +28,6 @@ const CategoryPost = ({ posts }) => {
     </div>
   );
 };
-export default CategoryPost;
 
 // Fetch data at build time
 export async function getStaticProps({ params }) {
@@ -48,3 +47,5 @@ export async function getStaticPaths() {
     fallback: true,
   };
 }
+
+export default CategoryPost;
