@@ -5,7 +5,7 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 export const getPosts = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection(first: 0) {
+      postsConnection(first: 5) {
         edges {
           cursor
           node {
@@ -192,6 +192,9 @@ export const getFeaturedPosts = async () => {
           }
         }
         featuredImage {
+          url
+        }
+        featuredLogo {
           url
         }
         title

@@ -13,7 +13,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.3.0",
+    "framer-motion": "^10.13.0",
     "graphql": "^15.6.1",
     "graphql-request": "^3.5.0",
     "html-react-parser": "^1.4.0",
@@ -24,7 +26,9 @@
     "react-multi-carousel": "^2.8.4",
     "react-transition-group": "^4.4.5",
     "sass": "^1.42.1",
-    "swr": "^1.0.1"
+    "styled-components": "^6.0.5",
+    "swr": "^1.0.1",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "@vercel/node": "^2.15.4",

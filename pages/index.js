@@ -4,7 +4,9 @@ import { FeaturedPosts } from "../sections";
 
 export default function Home({ posts }) {
   return (
+    
     <div>
+   
       <div className="container mx-auto px-10 mb-8">
         <FeaturedPosts />
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -22,7 +24,10 @@ export default function Home({ posts }) {
         </div>
       </div>
       <Footer />
+      
+   
     </div>
+
   );
 }
 

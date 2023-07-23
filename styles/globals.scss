@@ -16,7 +16,7 @@ body {
     content: "";
     width: 100%;
     height: 100vh;
-    background-image: url("../assets/bgbg.jpg");
+    background-image: url("../public/bgbg.jpg");
     position: fixed;
     left: 0;
     top: 0;
@@ -26,6 +26,7 @@ body {
     background-size: cover;
   }
 }
+
 .bg-black {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -39,9 +40,13 @@ body {
   border-image-source: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
   border-image-slice: 1;
 }
+.page-border{
+  background-color: grey;
+}
 
 footer{
   background-color:  #19191b;
+  color: whitesmoke;
 }
 
 .text-shadow{
