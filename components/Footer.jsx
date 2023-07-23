@@ -1,13 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Footer = () => {
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      // Sayfanın scroll yüksekliğini alalım
+      const scrollHeight = document.documentElement.scrollHeight;
+
+      // Sayfanın görünür yüksekliğini alalım
+      const visibleHeight = window.innerHeight;
+
+      // Kullanıcının aşağıya doğru ne kadar kaydırdığını alalım
+      const scrollY = window.scrollY;
+
+      // Footer'ın görünür yüksekliği (footer'in ekranın altından ne kadar uzak olduğu)
+      const footerVisibleHeight = scrollHeight - visibleHeight - scrollY;
+
+      // Footer'ın tam boyutunu alacağı mesafe (bu değeri istediğiniz gibi ayarlayabilirsiniz)
+      const fullSizeDistance = 50;
+
+      // Footer'ın görünür yüksekliği, tam boyutunu alacağı mesafeden azsa (veya eşitse) footer'i tam boyuta getir
+      setIsVisible(footerVisibleHeight <= fullSizeDistance);
+    };
+
+    // Scroll olayını dinleyelim
+    window.addEventListener("scroll", handleScroll);
+
+    // Component kaldırıldığında olay dinleyicisini temizleyelim
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <footer className="shadow-lg p-1  lg:p-1 pb-12  bottom-0 w-full sticky">
-      <div className="relative  grid  grid-cols-3 gap-4 overflow-hidden  pb-40 ml-40 mt-5 mb-6 ">
+    <footer
+      className={`shadow-lg p-1 lg:p-1 pb-12 bottom-0 w-full ${
+        isVisible ? "" : "h-80 opacity-1 "
+      }`}
+    >
+     <div className="relative  grid  grid-cols-3 gap-4 overflow-hidden  pb-40 ml-40 mt-5 mb-6 ">
          {/* İlk sütun */}
         <div className="col-span-1">
           <h1  className="ml-12">Kısaca</h1>
