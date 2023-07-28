@@ -30,15 +30,50 @@ body {
 .bg-black {
   background-color: rgba(0, 0, 0, 0.8);
 }
-/* #myBorder {
-  border-bottom: 2px solid;
-  border-color: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-} */
+
+@keyframes pulse {
+  0% {
+    border-image-source: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+  }
+  50% {
+    border-image-source: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  }
+  100% {
+    border-image-source: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+  }
+}
+#hCategory {
+  font-size:larger;
+  color: white; /* Başlangıçta beyaz renk */
+  transition: color 700ms; /* Renk geçişi için transition süresi */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#hCategory:hover {
+  color: #db2777; /* Hover durumunda pembe renk */
+}
+@keyframes glowing-bottom {
+  0% {
+    shadow: 0 0 5px 10px rgba(148, 0, 211, 0.7);
+  }
+  50% {
+    shadow: 0 0 20px 10px rgba(148, 0, 211, 0.7);
+  }
+  100% {
+   shadow: 0 0 5px 10px rgba(148, 0, 211, 0.7);
+  }
+}
+
+
 #myBorder {
-  border-bottom-width: 2px;
+  box-sizing: border-box;
+  
+  border-bottom-width: 4px;
   border-style: solid;
   border-image-source: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
   border-image-slice: 1;
+  animation: pulse 2s infinite ,  glowing-bottom 2s infinite;
 }
 .page-border{
   background-color: grey;
@@ -76,6 +111,9 @@ footer{
   }
   
 }
+.border-bottom-2 {
+  border-bottom: 2px solid #ccc; /* İstediğiniz renk ve kalınlığı burada belirtebilirsiniz */
+}
 
 a {
   color: inherit;
@@ -85,3 +123,4 @@ a {
 * {
   box-sizing: border-box;
 }
+

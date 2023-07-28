@@ -27,6 +27,7 @@
     "react-transition-group": "^4.4.5",
     "sass": "^1.42.1",
     "styled-components": "^6.0.5",
+    "swiper": "^10.0.4",
     "swr": "^1.0.1",
     "wow.js": "^1.2.2"
   },
